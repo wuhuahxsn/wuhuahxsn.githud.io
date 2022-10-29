@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>真&正的个人主页</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="/LOGO.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+        body {
+            margin: 0;
+            /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        /* * {
+        border: 1px solid #333;
+      } */
+        .flex {
+            display: flex;
+        }
+
+        /* 占满比例 */
+        .flex1 {
+            flex: 1;
+        }
+
+        /* 竖向 */
+        .column {
+            flex-direction: column;
+        }
+
+        /* 阴影 */
+        .yinYing {
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        }
+
+        /* 白色背景 */
+        .baiSe {
+            background-color: #fff;
+        }
+
+        /* 上下左右外边距 */
+        .mg8 {
+            margin: 8px;
+        }
+
+        /* 右外边距 */
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        /* 上外边距 */
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        /* 四个小盒子 */
+        .shuJu {
+            height: 100px;
+        }
+
+        /* 中间的大盒子 */
+        .lieBiaoXiang {
+            height: 160px;
+        }
+
+        /* 导航条 */
+        .daoHang {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(201, 201, 201);
+            font-size: 14px;
+            color: #666;
+        }
+
+        .neiRong::-webkit-scrollbar {
+            display: none;
+            /* Chrome Safari */
+        }
+
+        /* 当屏幕宽度小于600px时要改变的css */
+        @media (max-width: 600px) {
+
+            /* 小屏幕上取消侧边栏，后面学js时会教怎么弹出 */
+            .ceBian {
+                display: none;
+            }
+
+            /* 内容栏和数据栏flex方向改为竖向 */
+            .neiRong {
+                flex-direction: column;
+            }
+
+            .shuJuQu {
+                flex-direction: column;
+            }
+
+            /* 右区加左外边距 */
+            .youQu {
+                margin-left: 8px;
+            }
+
+            /* 数据块外边距，大小改为自动宽高 */
+            .shuJu {
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 3" class="ceBian flex column baiSe yinYing">
+        <!-- 侧边头像栏 -->
+        <div style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        " class="flex">
+            <img alt="logo" src="/LOGO.jpg" width="40px" height="40px" />
+            <div style="margin-left: 10px">真&正</div>
+        </div>
+        <!-- 导航栏 -->
+
+        <div class="flex1">
+            <div class="daoHang">
+                <div class="daoHang">快捷导航，看累了，就从这里出去吧</div>
+                <a href="https://www.baidu.com">百度一下，你就知道</a>
+
+            </div>
+            <div class="daoHang">
+                <a href="https://www.bilibili.com/">哔哩哔哩</a>
+
+
+            </div>
+            <div class="daoHang">
+                <a href="https://cn.bing.com/">Microsoft Bing</a>
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+        <!-- 头部栏 -->
+        <div style="height: 60px; z-index: 2" class="baiSe yinYing"></div>
+        <!-- 内容区 -->
+        <div class="flex flex1 neiRong" style="overflow: auto">
+            <!-- 左区 -->
+            <div style="flex: 3" class="flex column mg8">
+                <!-- 数据区 -->
+                <div class="flex shuJuQu">
+                    <!-- 四个小块显示重点数据 -->
+                    <!--第一小块：展示我的个人哔哩哔哩首页-->
+                    <div class="shuJu baiSe yinYing flex1 mgr8">
+                        <img alt="LOGO B" src="/b.jpg" width="120px" height="75px"><br />
+                        <a href="https://space.bilibili.com/637698260?spm_id_from=333.1007.0.0">我的哔哩哔哩主页</a>
+                    </div>
+                    <!--第二小块：展示我的个人邮箱-->
+                    <div class="shuJu baiSe yinYing flex1 mgr8">
+                        <p>我的个人邮箱：<br />2490878693@qq.com<br />zhengxian2022@outlook.com<br />请优先使用qq.com结尾的邮箱</p>
+                    </div>
+                    <!--第三小块和第四小块-->
+                    <div class="shuJu baiSe yinYing flex1 mgr8">
+                        <p>我今年小学四年级，嗯，这是真的，别不信</p>
+                    </div>
+                    <div class="shuJu baiSe yinYing flex1 mgr8">
+                        <img alt="QQ" src="g.png" width="120px" height="75px">
+                        <br />
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=2490878693&site=qq&menu=yes">我的QQ</a>
+                    </div>
+                </div>
+                <!-- 列表区，列表数据可以无限增加 -->
+                <div class="flex column">
+                    <!-- 列表项 -->
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing">
+                        <h3>一台电脑登录两个微信软件《早期作品》</h3>
+                        <a href="https://zhengxian.rth1.one/yitai">软件官网“点这里”</a>
+                    </div>
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing">
+                        <h3>各种bat文件程序《早期中的早期作品》</h3>
+                        <a href="https://pan.baidu.com/s/1QKJo-Le-yueBldTv8k2g9A?pwd=r2um">下载链接“点这里”</a>
+                    </div>
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing">
+                        <p>这里还没有内容，正在加班加点补充中</p>
+                    </div>
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing">
+                        <p>这里还没有内容，正在加班加点补充中</p>
+                    </div>
+                    <div class="lieBiaoXiang mgt8 baiSe yinYing">
+                        <p>这里还没有内容，正在加班加点补充中</p>
+                    </div>
+                    <p>备案号：没有备案 版权声明：就是个人网站而已，要搬自己搬拿去改名字，也可以私信或邮箱问我各个代码的用途</p>
+                    <a href="https://gitee.com/zhuangzhengxian/personal-website">本站开源（gitee）</a>
+                </div>
+            </div>
+            <!-- 右区 -->
+            <div style="flex: 1" class="youQu flex column mgr8 mgt8">
+                <!-- 提示区 -->
+                <div style="height: 150px" class="baiSe yinYing" text-align: center;>
+                    <p>你好，欢迎来到我的个人网页</p>
+                    <p>我的个人主页对移动端的适配非常差，正在优化中</p>
+                    <a href="https://zhengxian.rth1.one/%E5%98%BF%E5%98%BF%EF%BC%81%EF%BC%81%EF%BC%81.html">旧版</a>
+                </div>
+                <!-- 消息区 -->
+                <div style="height: 300px" class="mgt8 baiSe yinYing">
+                    <p>你现在看到的版本是 v0.5 Beta<br />本版本更新内容<br />1.网页全部重写<br />2.修改css属性<br />3.本版本更新了许多功能，请自行研究！
+                        <a href="https://zhengxian.rth1.one/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.txt">更多更新日志</a>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

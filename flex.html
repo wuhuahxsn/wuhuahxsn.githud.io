@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>真&正的个人主页</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #eee;
+    }
+
+    /*  * {
+      border: 1px solid black;
+    } */
+
+    .flex {
+      display: flex;
+    }
+
+    .baiSe {
+      background-color: white;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .mg8 {
+      margin: 8px;
+    }
+
+    .mgr8 {
+      margin-right: 8px;
+    }
+
+    .mgt8 {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body class="flex">
+  <!--所有关于注释的代码都是在注释的下面-->
+  <!--侧边栏-->
+  <div style="width: 200px" class="baiSe"></div>
+  <!--主区域-->
+  <div class="flex1 flex column"></div>
+  <!--头部栏-->
+  <div style="height: 60px" class="baiSe"></div>
+  <!--内容区-->
+  <div class="flex1">
+    <!--左区-->
+    <div style="flex:3" class="flex column mg8"></div>
+    <!--数据区-->
+    <div class="flex">
+      <!--数据块-->
+      <div style="height:100px" class="flex1 baiSe mg8"></div>
+      <div style="height:100px" class="flex1 baiSe mg8"></div>
+      <div style="height:100px" class="flex1 baiSe mg8"></div>
+      <div style="height:100px" class="flex1 baiSe mg8"></div>
+    </div>
+    <!--列表区-->
+    <div class="flex column">
+      <!--列表项-->
+      <div style="height: 160px;" class="baiSe mgt8"></div>
+      <div style="height: 160px;" class="baiSe mgt8"></div>
+      <div style="height: 160px;" class="baiSe mgt8"></div>
+    </div>
+  </div>
+  <!--右区-->
+  <div style="flex:1" class="flex column mgr8 mgt8">
+    <!--提示区-->
+    <div style="height: 150px;" class="baiSe">
+    </div>
+    <!--消息区-->
+    <div style="height: 300px;" class="baiSe mgt8"></div>
+  </div>
+</body>
+
+</html>
